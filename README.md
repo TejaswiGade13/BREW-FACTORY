@@ -42,24 +42,6 @@ A modern coffee house landing page featuring smooth scrolling, immersive animati
 
 ---
 
-## 📂 Project Structure
-
-```text
-BrewFactory/
-│
-├── assets/
-│   ├── images/
-│   ├── videos/
-│   ├── icons/
-│   └── demo.gif
-│
-├── css/
-├── js/
-├── index.html
-└── README.md
-```
-
----
 
 ## 🚀 Getting Started
 
