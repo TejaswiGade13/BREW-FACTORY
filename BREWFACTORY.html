@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BREW FACTORY - PREMIUM SPECIALITY COFFEE</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="cssfiles/searchbaranimation.css">
+        <link rel="icon" href="footerillustrations/BREW FACTORY2.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- TweenMax - GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+
+        <style>
+            /* fonts */
+            @font-face {
+            font-family: Hamburg Hand;
+            src: url(HamburgHand-Light.otf);
+            }
+
+            @font-face {
+                font-family: Recton;
+                src: url(RectonBold1.ttf);
+            }
+
+            @font-face {
+                font-family: Roundo;
+                src: url('Roundo-Light.otf') format('opentype');
+            }
+            @font-face {
+                font-family: Founder;
+                src: url('/gasp/FoundersGroteskCondensed-Bold.ttf') format('opentype');
+            }
+            @font-face {
+                font-family: CardinalR;
+                src: url('/gasp/cardinalfruitweb-regular.ttf');
+            }
+
+            @font-face {
+                font-family: Cardinali;
+                src: url('/gasp/cardinalfruitweb-italic.ttf');
+            }
+            @font-face {
+                font-family: Tokyodreams;
+                src: url('/Projectwebsite/TokyoDreams-Regular1.woff');
+            }
+            @font-face {
+                font-family: Roasche;
+                src: url('/Projectwebsite/RoashePersonalUse-jEa4M.otf');
+            }
+            @font-face {
+                font-family: cosi azur;
+                src: url('CosiAzure-Black.ttf');
+            }
+            @font-face {
+                font-family: cosi azur;
+                src: url();
+            }
+            ::-webkit-scrollbar{
+                display: none;
+            }
+
+            body {
+                margin: 0;
+                
+            }
+            /* HEADER AND HERO SECTION*/
+            .header {
+                min-height: 100vh;
+                margin: 0%;
+                position: relative;
+                z-index: 0 ;   
+                background-color: #000;
+            }
+
+            .header nav {
+                align-items: center;
+            }
+
+            .header nav ul {
+                margin-left: 200px;
+                padding: 50px;
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                justify-content: right;
+                font-family: Recton;
+                font-weight: 100;
+                font-size: 24px;
+            }
+
+            .header nav ul li a {
+                color: #F9E3AF;
+                text-decoration: none;
+                position: relative;
+                padding: 0 2px;
+                transition: all 0.5s ease;
+                
+
+            }
+
+            .nav_link:hover{
+                color: #fff;
+                cursor: pointer;
+            }
+            .nav_link::after{
+                content: '';
+                height: 2px;
+                width: 0;
+                background: #F3E3D3;
+                position: absolute;
+                left: 0;
+                bottom: -8px; 
+                transition: all 0.5s;
+                pointer-events: none;
+
+            }
+            .nav_link:hover::after{
+                width: 100%;
+
+            }
+            .navmenu {
+                margin-right: 20px;
+                color: #F3E3D3;
+                padding-right: 10px;
+            }
+            .navigation {
+                display: flex;
+                margin-top: 2vh;
+                justify-content: space-between;
+                height: 160px;
+                z-index: 99;
+            }
+
+
+            .herosection {
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: 1fr;
+                height: 500px;
+                margin: 60px 153.5px;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+                
+            }
+            .maintag,
+            .subtag {
+                font-family: Recton;
+                text-align: center;
+                color: #F3E3D3;
+                justify-content: center;
+
+            }
+            .maintag {
+                font-size: 9em;
+                font-weight: 1000;
+                z-index: 0;
+            }
+            .subtag {
+                font-size: 2.8em;
+                font-weight: 1000;
+                
+            }
+            .calltoaction {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+            }
+            .calltoaction button {
+                padding: 15px 25px;
+                border: none;
+                font-family: Recton;
+                font-size: 1.4em;
+                cursor: pointer;
+                background-color: #F3E3D3;
+                font-weight: 1000;
+                color: #4E312D;
+                transition: padding 0.6s ease-out ,box-shadow 0.6s ease-out,background-color 0.6s ease-out ,color 0.6s ease-out,border-radius 0.6s ease-out;
+                transition-delay: 0.1s;
+            
+
+
+            
+            }           
+            .calltoaction button:hover{
+                padding: 20px 30px 20px 30px;
+                box-shadow: 0 0 20px rgba(78,49,45,1);
+                background-color: #4E312D;
+                color: #F3E3D3;
+                border-radius: 15px;       
+            }
+            .spacer {
+                height: 90px;
+            }
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 3vh;
+                height: 100%;
+                
+            }  
+            .l1{
+                height: 100%;
+            }  
+            .l1 img{
+                width: 300px;
+            }   
+            .backgroundvideo{
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height:auto;
+
+            }
+            @media (min-aspect-ratio:16/9){
+                .backgroundvideo{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @media (max-aspect-ratio:16/9){
+                .backgroundvideo{
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            .icons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 30px;
+                margin-bottom: 20px;
+                padding: 10px;
+            }
+            .icons:hover{
+                cursor: pointer;
+                
+            }
+            .carticon{
+                padding-bottom: 10px;
+            }
+            .carticon:hover{
+                #circle{
+                    fill: #F3E3D3;
+                }
+
+            }
+            .usericon{
+                padding-bottom: 5px;
+                transition: fill 0.8s ease;
+            
+            }
+            .usericon:hover{
+
+                path{
+                    fill: #F3E3D3;
+
+
+                }
+                #ud{
+                    fill: #F3E3D3;
+                }
+            }
+            .searchicon{
+                padding-right: 40px;
+                padding-bottom: 12px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-25%,-24%);
+                margin-right: 100px; 
+            }
+
+            /* LATESR ARRIVAL SECTION STYLES*/
+            .section2{
+                height: 90vh;
+                transition: all 0.7s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 5vh;
+                background-color: #000;
+            }
+            .section2 h2{
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 3em;
+                font-weight: 400;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                writing-mode: vertical-rl;
+                display: inline-block;
+                color: #f0e1c9;
+            }
+            .latestarrivalssection{
+                height: 90%;
+                margin: 0vw 1vw ;
+                padding-bottom: 6vh;
+               /* background-color: #FCCB9A;*/
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background-color: #000;
+            }
+            .latestarrivalssection .elem{
+                height: 90%;
+                width: 45%;
+                display: flex;                           
+            }
+            .latestarrivalssection .elem:hover{
+                cursor: pointer;
+                .laimg{
+                    scale: 0.98;
+                }
+                .addbutton{
+                    opacity: 1;
+                }
+
+            }
+            .latestarrivalssection .elem:first-child {
+                margin-left: 1vw;
+            }
+            .latestarrivalssection .elem:last-child {
+                margin-right: 1vw;
+            }
+            .elem img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                transition:  scale 0.7s ease;
+            }
+
+            .addbutton {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                z-index: 1; /* Ensure it appears above the image */
+                transition: background-color 0.7s ease,opacity 0.5s ease;
+                opacity: 0;
+                margin-top: 10vh;
+            }
+            .addbutton .tex{
+                color:#000;
+                font-family: Montserrat;
+                text-align: center;
+                transition: opacity 0.7s ease;
+                margin-bottom: 5vh;
+                border: none;
+                padding: 2vh 5vh;
+                border-radius: 25px;
+            }
+            .tex:hover{
+                cursor: pointer;
+            }
+
+
+            /* FOOTER SECTION STYLES*/
+            .section5{
+                height: 50vh;
+                background-color: #f0e1c9;
+            }
+            .section5 {
+                background-image: url(footerillustrations/coffee6A.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 0% 10%;
+            }
+            .copyright{
+                height: 7vh;
+                background-color: #dccdb5 ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: Montserrat;
+            }
+            .footer-container{
+                background-color: #f0e1c9;
+                height: 100%;
+                width: 77%;
+                transform: translateX(30%);
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .newsletter{
+                height: 100%;
+                width: 42%;
+                
+                font-family: Montserrat;
+            }
+            .newsletter .p{
+                padding-top: 4vh;
+                font-size: 1.8em;
+               
+            }
+            .newsletter p{
+                font-size: 1em;
+                padding-left: 2vw;
+               
+            }
+            .newsletter input{
+                
+                padding-bottom: 20px;
+                padding-top: 20px;
+                padding-left: 20px;
+                width: 70%;
+                margin-left: 2vw;
+                transition: all 0.3s ease;
+            }
+            .email-box{
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                
+            }
+            #email{
+                border: none;
+                font-family: Montserrat;
+                
+            }
+            #email::placeholder{
+                color: #4E312D;
+            }
+            #email:focus{
+                outline: none;
+                background-color: #dccdb5;
+
+
+            }
+            .newsletter button{
+                margin-left: 15px;
+                padding: 14px;
+                border: none;
+                background-color: #FCCB9A;
+            }
+            .newsletter button:hover{
+                cursor: pointer;
+            }
+            .footer-links{
+                
+                height: 100%;
+                width: 58%;
+                font-family: Montserrat;
+            }
+            .links {
+                 display: flex;
+                 align-items: top;
+                 justify-content: space-between;   
+                 padding-top: 6.1vh; 
+                             
+            }
+            .links a{
+                text-decoration: none;
+                color: #4E312D;
+                margin-bottom: 2.3vh; 
+                transition: all 0.5s ease;
+                
+            }
+            .links a:hover{
+                transform: translateX(8px);
+            }
+            .footer-icons{
+                
+                height: 30%;
+                width: 100%;
+                display: flex;
+                align-items: top;
+                justify-content: center;
+
+
+                
+            }
+            .footer-icons i{
+                margin-right: 5vh;
+                transition: all 0.5s ease-in-out;
+                color: #4E312D;
+            }
+            .footer-icons i:hover{
+                transform: translateY(-7px);
+                cursor: pointer;
+                color: #999786;
+            }
+            /* DISCOUNT BANNER SECTION STYLES*/
+            .section2-5{
+                height: 74vh;
+                background-color: #4E312D;
+                position: relative;
+                overflow: hidden;
+                
+            }
+            .discount-banner{
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 108%;
+                width: 100%;
+                flex-direction: column;
+                transform: translateY(-6vh);
+                background-color: #000;
+                transition: background-color 1s ease;
+                
+            }
+            .discount-banner h1{
+                font-size: 3.9em;
+                color: #fff;
+                font-family: Recton;
+                pointer-events: auto;
+                transition: color 0.6s ease;
+                            
+            }
+            .discount-banner h1.color-change {
+                color: #4E312D; /* The new color to change to */
+            }
+             .discount-banner h1.color-changer{
+                color: #fff;
+            }
+            .banner-animation{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+
+            }
+            .spacer3{
+                height: 20vh;
+            }
+            .discount-banner button{
+                padding: 20px;
+                font-family: Recton;
+                pointer-events: auto;
+                border: none;
+                background-color: #F3E3D3;
+                color: #000;
+                margin-top: 0;
+                font-size: 1.4em;
+                font-weight: 500;
+                
+            }
+            .discount-banner button:hover{
+                cursor: pointer;
+
+            }
+
+            .discount-banner h1 span {
+                transition: color 0.1s ease; /* Add transition for smooth color change */
+            }
+            .discount-banner h1 span.color-change {
+                color: #fff; /* The new color to change to */
+            }
+            .section4{
+                height:60vh;
+                background-color: #dccdb55e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                background-image: url('footerillustrations/pexels-psomas-1045199.jpg');
+                background-size: cover;
+                
+            }
+            .section4 h2{
+                font-family: Montserrat;
+                font-weight: 500;
+                padding-top: 5vh;
+                font-size: 2.5em;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                backdrop-filter: blur(5px);
+                color: white;
+            }
+
+
+            .section3{
+                height: 100vh;
+                transition: all 0.7s ease;
+                font-family: Montserrat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .heade{
+                height: 2%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10vh 2vh;
+                color: #f0e1c9;
+                writing-mode: vertical-rl;
+            }
+            .heade h1{
+                font-size: 2em;
+                padding-left: 0;
+                margin-left: 0;
+            }
+            .row1a{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 79vh;
+                width: 100%;
+                padding-left: 10vh;
+                padding-right: 3vh;
+                padding-top: 7vh;
+              
+                
+            }
+            .prod{
+                height: 100%;
+                width : 23.5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: scale 0.5s ease;
+                background-color: #fff;
+            }
+            .prod:hover{
+                scale: 1.025;
+                cursor: pointer;
+            }
+            .prod img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+            }
+            .title {
+                opacity: 0;
+                font-size: 1.7em;
+                font-weight: 100;
+                color: #f0e1c9;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                text-align: center;
+                font-family: Tokyo dreams;
+            }
+
+            .title-above {
+                position: absolute;
+                bottom: 100%; /* Position the title above the image */
+            }
+
+            .title-below {
+                position: absolute;
+                top: 100%; /* Position the title below the image */
+            }
+
+
+            .pin{
+                height: 100vh;
+                background-color: #000;
+                overflow: auto;
+                overflow-x: hidden;
+
+            }
+            .innerpin{
+                height: 100%;
+                min-width: max-content;
+                text-transform: uppercase;
+                color: #f0e1c9;
+                font-family: cosi azur;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15.8em;
+                font-weight: 50;
+                white-space: nowrap;
+                
+               
+            }
+            .reviewsection{
+                height: 200vh;
+            }
+            .top{
+                position: absolute;
+                top: 0%;
+                width: 100%;
+                height: 50vh;
+                background-color: #f0e1c9;
+                z-index: 9;
+                overflow: hidden;
+
+            }
+
+            .center{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                transform-origin: center;
+                background-color: rgb(0, 0, 0);
+                transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+                overflow: hidden;
+            }
+
+            .bottom{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50vh;
+                background-color: #f0e1c9;
+                overflow: hidden;
+            }
+            .content1A{
+                margin-top: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                color: #f0e1c9;
+                gap: 4vh;
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            .content1A h4{
+                padding-top: 0;
+                margin-top: 0;
+                font-size: 3vw;
+                font-family: Recton;
+            }
+
+            .content1A h3{
+                width: 22%;
+                font-size: 3vw;
+                font-family: CardinalR;
+                text-align: center;
+                font-weight: 400;
+            }
+
+            .content1A .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 7vw;
+                height: 2vw;
+                border-radius: 50px;
+                background-color: #fff;
+                color: #0d0d0d;
+                transition: all 0.7s ease;
+            }
+            .content1A .btn:hover{
+                cursor: pointer;
+                background-color: #f0e1c9;
+            }
+            .outer h1{
+                font-family: cosi azur;
+                font-size: 19vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #000;
+
+            }
+
+            .content1A h2{
+                font-size: 20vw;
+                font-family: Founder;
+            }
+            .outer{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .top-h1{
+                top: 42% !important;
+                font-family: cosi azur;
+            }
+
+            .bottom-h1{
+                top: -58% !important;
+                font-family: cosi azur;
+            }
+            .reviews {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                display: none;
+                gap: 4vh;
+                align-items: center;
+                justify-content: center;
+            }
+            .reviews .butn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 7vw;
+                height: 2vw;
+                border-radius: 50px;
+                background-color: #fff;
+                color: #0d0d0d;
+                font-family: Founder;
+                transition: all 0.7s ease;
+            }
+            .reviews .butn{
+                cursor: pointer;
+                background-color: #f0e1c9;
+            }
+            .review-card {
+                height: 50vh;
+                width: 45vh;
+                background-color: #f0e1c9;
+                color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: box-shadow 0.7s ease;
+                padding: 3vh;
+                font-family: Montserrat;
+            }
+
+            .review-card:hover {
+                scale: 1.025;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+            .stars{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;    
+            }
+            .profile{
+                height: 90px;
+                width: 90px;
+                
+            }
+            .profile img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 50px;
+            }
+            .categoriesnew{
+                height: 100vh;
+                width: 100%;
+                font-family: Cardinali;
+            }
+            .navigation-wrapper{
+                color: #f0e1c9;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .navigation-item{
+                display: block;
+                user-select: none;
+            }
+            .navigation-list li{
+                list-style-type: none;
+            }
+            .navigation-list a{
+                color: #f0e1c9;
+                text-decoration: none;
+                font-family: cosi azur;
+                font-size: 13em;
+            } 
+            .navigation-list a:hover{
+                color: #4E312D;
+            } 
+            .char{
+                opacity: 0;
+                transition: all 0.5s ease;
+                transform: translateY(152px);
+            }
+
+         #herobutton1{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            left: 0;
+            bottom: 0;
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton1:hover{
+            background-color: #B1C07A;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton2{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.5vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton2:hover{
+            background-color: #C28B4C;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton3{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.5vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton3:hover{
+            background-color: #113D56;
+            cursor: pointer;
+        }
+        #herobutton5{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.3vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton5:hover{
+            background-color: #EE9C76;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton6{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-13.3vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton6:hover{
+            background-color: #EE9C76;
+            color: #000;
+            cursor: pointer;
+        }
+              
+
+        </style>
+    </head>
+    <body>
+        <div class="main" style="background-color: #000;">
+            <section>     
+                <!-- HEADER -->
+                <header class="header" style="background-color: #000;">
+                        <video  class="backgroundvideo" autoplay loop muted plays-inline >
+                            <source src="backgroundvideothirdoption - Made with Clipchamp.mp4" type="video/mp4">
+                        </video>
+
+                        
+                        <nav class="navigation">
+                            
+                            <div class="logo">
+                                <a href="BREWFACTORY.html">
+                                    <div class="l1">
+                                        <img src="LOGOS/BREW FACTORY_transparent2.png" alt="">
+
+                                    </div>        
+                                </a>
+                            
+                            </div>
+                            <ul>
+                                <li class="navmenu"><a class="nav_link" href="about.html">ABOUT</a></li>
+                                <li class="navmenu"><a class="nav_link" href="coffee.html">COFFEE</a></li>
+                                <li class="navmenu"><a class="nav_link" href="coffeeequipment.html">EQUIPMENT</a></li>
+                                <li class="navmenu"><a class="nav_link" href="merchpage.html">MERCHANDISE</a></li>
+                            </ul>
+                            
+                            <div class="icons">
+
+                                <div class="content">
+                                    <div class="search">
+                                    <input type="text" class="search__input" aria-label="search" placeholder="Search">
+                                    <button class="search__submit" aria-label="submit search">
+                                            <svg width="130" height="130" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="searchicon">
+                                            <rect x="0.5" y="0.5" width="323" height="293" fill="none"/>
+                                            <rect x="0.5" y="0.5" width="323" height="293" stroke="none"/>
+                                            <path d="M201 116C201 136.319 183.434 153 161.5 153C139.566 153 122 136.319 122 116C122 95.6807 139.566 79 161.5 79C183.434 79 201 95.6807 201 116Z" stroke="#F9E3AF" stroke-width="5"/>
+                                            <path d="M233.825 210.932C234.34 211.581 235.284 211.69 235.932 211.175C236.581 210.66 236.69 209.716 236.175 209.068L233.825 210.932ZM183.825 147.932L233.825 210.932L236.175 209.068L186.175 146.068L183.825 147.932Z" fill="#F9E3AF" stroke-width="5"/ >
+                                        </svg></i></button>
+                                    </div>
+                                </div>     
+                                <svg width="80" height="80" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="carticon" >
+                                    <rect width="324" height="294" fill="none"/>
+                                    <circle cx="146" cy="208" r="14.55" stroke="#F9E3AF" stroke-width="5" id="circle"/>
+                                    <circle cx="196" cy="208" r="14.55" stroke="#F9E3AF" stroke-width="5" id="circle"/>
+                                    <path d="M76.5 100H82.7207C91.3385 100 99.0815 105.265 102.25 113.279L105.5 121.5M228 182H133.298C127.737 182 122.792 178.463 120.995 173.201L117 161.5M105.5 121.5L220.476 122.822C228.331 122.912 233.982 130.4 231.915 137.978L229.318 147.499C227.064 155.765 219.556 161.5 210.988 161.5H117M105.5 121.5L117 161.5" stroke="#F9E3AF" stroke-width="5" />
+                                </svg>
+                    
+
+                            <a href="formnew.html">
+                                <svg width="75" height="75" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="usericon" id="usericon"> 
+                                    <rect x="0.5" y="0.5" width="323" height="293" fill="none"/>
+                                    <rect x="0.5" y="0.5" width="323" height="293" stroke="none"/>
+                                    <path d="M202 116C202 136.319 184.434 153 162.5 153C140.566 153 123 136.319 123 116C123 95.6807 140.566 79 162.5 79C184.434 79 202 95.6807 202 116Z" stroke="#F9E3AF" stroke-width="5"/>
+                                    <rect x="93.5" y="168.5" width="138" height="56" rx="28" stroke="#F9E3AF" stroke-width="5"/ id="ud">
+                                </svg>
+                            </a>
+
+                        </div>
+                        </nav>
+                        <div class="spacer"></div>
+                                
+                        <div class="herosection">
+
+                            <div class="maintag">BREWS FOR YOU!</div>
+                            <div class="subtag"> Fall in love with our assorted collection of coffee, delivered right  to your door step! </div>
+                            <div class="calltoaction">
+                                <button>SHOP NOW</button>
+                            </div>
+
+                        </div>
+                </header>
+            </section>
+
+            <section class="pin" style="background-color: #000;">
+                <div class="innerpin">
+                    <h1>Explore the Ease of Eco-Friendly Coffee</h1>
+                </div>
+            </section>
+    
+
+            <div class="spacer2" style="background-color: #000;">    
+        <!-- LATEST ARRIVALS-->
+        
+            <section class="section2" data-scroll-container="" >
+
+                <h2 data-scroll data-scroll-speed="0.8">LATEST ARRIVALS</h2>
+                <div class="latestarrivalssection">
+                    <div id="elem1" class="elem">
+                        <img data-scroll data-scroll-speed="0.9" src="PRODUCT PAGE/coffee9.jpeg" alt="" class="laimg">
+                        <div class="addbutton">
+                            <div >
+                                <button class="tex" onclick="cart()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="elem2" class="elem">
+                        <img data-scroll data-scroll-speed="0.9" src="merchandise/bottle1.png" alt="" class="laimg">
+                        <div class="addbutton">
+                            <div >
+                                <button class="tex"  onclick="cart()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="elem3" class="elem">
+                        <img data-scroll data-scroll-speed="0.9" src="PRODUCT PAGE/coffee10.jpeg" alt="" class="laimg"> 
+                        <div class="addbutton">
+                            <div >
+                                <button class="tex"  onclick="cart()">ADD TO CART</button>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div id="elem4" class="elem">
+                        <img data-scroll data-scroll-speed="0.9" src="Equipment/frenchpress9.jpeg" alt="" class="laimg"> 
+                        <div class="addbutton">
+                            <div>
+                                <button class="tex"  onclick="cart()">ADD TO CART</button>
+                            </div>
+                        </div>                   
+                    </div>
+
+                </div>
+                    
+            </section>
+            <div class="spacer4" style="height: 8vh;"></div>
+
+            <!-- CATEGORIES SECTION -->
+            <section class="categoriesnew">
+                <div class="navigation-wrapper">
+                    <div class="projectpreview-wrapper">
+                        <div class="project-preview">
+
+                        </div>
+                    </div>
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a href="coffee.html" class="navigationlink navigation-link-1">
+                                <span data-text="coffee" id="mytext"> COFFEE</span>
+                            </a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="coffeeequipment.html" class="navigationlink navigation-link-2">
+                                <span data-text="equipment" id="mytext1"> EQUIPMENT</span>
+                            </a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="merchpage.html" class="navigationlink navigation-link-3">
+                                <span data-text="coffee" id="mytext2"> MERCHANDISE</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+           
+            <section class="section2-5" style="background-color: #000;">
+                <video src="footerillustrations/aniamtion5 - Made with Clipchamp.mp4" class="banner-animation"  muted  plays-inline></video>
+                <div class="discount-banner">
+                    <h1> GET 20% OFF ON <span class="color-change-part">YOUR FIRST  PUR</span>CHASE WITH US! </h1>
+                    <button> LEARN MORE </button>
+                </div>
+            </section>
+            <!--BESTSELLERS-->
+            <section  class="section3">
+
+                <div class="row1a">
+                    <div class="prod">
+                        <div class="title">Guatemala Coffee - Organic Whole Beans, Single Origin</div>
+                        <img src="PRODUCT PAGE/coffee4.jpeg" style="position: relative;">
+                        <button alt="" onclick="cart()" id="herobutton1" style="position: absolute;">
+                            ADD TO CART
+                        </button>
+                    </div>
+                    <div class="prod">
+                        <div class="title">Plastic frenchpress- 500ml</div>
+                        <img src="Equipment/frechpress4.jpeg" alt="">
+                        <button alt="" onclick="cart()" id="herobutton1" style="position: absolute;">
+                            ADD TO CART
+                        </button>
+                    </div>
+                    <div class="prod">
+                        <div class="title">Coffee wave graphic sweatshirt</div>
+                        <img src="merchandise/Iced Coffee Wave Sweatshirt _ Gifts for Coffee Lovers _ Iced Coffee _ Comfy Sweatshirt _ Coffee _ Sweater _ Cozy _ Mom Gift _ Teacher Gift.jpeg" alt="">
+                        <button alt="" onclick="cart()" id="herobutton1" style="position: absolute;">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+                    <div class="prod">
+                        <div class="title">GLASS BOTTLE- 1L</div>
+                        <img src="merchandise/bottle3.png" alt="">
+                        <button alt="" onclick="cart()" id="herobutton1" style="position: absolute;">
+                            ADD TO CART
+                        </button>
+                    </div>
+
+                </div>
+                <div class="heade">
+                    <h1>
+                        BESTSELLERS
+                    </h1>
+
+                </div>
+
+                    
+            </section >
+            </section>
+            <section class="reviewsection">
+                <div>
+                  <div class="outer">
+                        <div class="top">
+                        <h1 class="top-h1">REVIEWS</h1>
+                        </div>
+                        <div class="center">
+                        <div class="content1A">
+                            <h4>BREW FACTORY</h4>
+                            <h3><i>Browse</i> and See what other <i>COFFEE LOVERS</i> Say about our coffee.</h3>
+                            <div class="btn" id="arrow-btn" onclick="">
+                            <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <div style="display: flex;gap: 2vw;">
+                                <div class="review-card">
+                                    <div style="display: flex;flex-direction: column; height: 100%;width: 100%;">
+                                        <div style="display: flex;height: 20%;width: 100%;transform: translateX(25px);padding-top: 2vh;">
+                                            <div style="width: 23%;">
+                                                <div class="profile"><img src="footerillustrations/download (1).jpeg" alt=""></div>
+                                            </div>
+                                            <div style="width: 77%;display: flex;flex-direction: column;padding-left: 25px;">
+                                                    <div style="height: 40%;width: 100%;display: flex;align-items: flex-start;justify-content: flex-start;padding-left: 8px;padding-bottom: 20px; ">
+                                                        <p>AKARSH GUPTA</p>
+                                                    </div>
+                                                    <div style="height: 60%;width: 100%;padding-top: 15px;" class="stars">
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-regular fa-star fa-2x"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div style="height: 80%;width: 100%;text-align: justify;display: flex;align-items: center;justify-content: center;padding-top: 4.5vh;">
+                                            <p style="width: 100%;height: 100%;padding: 2vh;">
+                                                Brew factory offers a great selection of high-quality coffee beans from around the world. The website is easy to navigate, though it could be a bit faster. Prices are a bit high, but justified by the exceptional quality. <br> <br>Customer service is responsive and helpful, though shipping can occasionally be slightly delayed. Overall, a fantastic place for coffee lovers!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    <div style="display: flex;flex-direction: column; height: 100%;width: 100%;">
+                                        <div style="display: flex;height: 20%;width: 100%;padding-top: 2vh;">
+                                            <div style="width: 23%;">
+                                                <div class="profile"><img src="footerillustrations/download.jpeg" alt=""></div>
+                                            </div>
+                                            <div style="width: 77%;display: flex;flex-direction: column;padding-left: 25px;">
+                                                    <div style="height: 40%;width: 100%;display: flex;align-items: flex-start;justify-content: flex-start;padding-left: 8px;padding-bottom: 20px; ">
+                                                        <p>INAYA SHARMA</p>
+                                                    </div>
+                                                    <div style="height: 60%;width: 100%;padding-top: 15px;" class="stars">
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-regular fa-star fa-2x"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div style="height: 80%;width: 100%;text-align: justify;display: flex;align-items: center;justify-content: center;padding-top: 4.5vh;">
+                                            <p style="width: 100%;height: 100%;padding: 2vh;">
+                                                BREW FACTORY is an exceptional online store for coffee enthusiasts! Their extensive range of premium beans from various regions is truly impressive. The website is easy to navigate and well-designed. <br> <br> While prices reflect the high quality, they are fair and reasonable. Customer service is quick to respond and very helpful, with fast shipping times. I highly recommend BREWFACTORY to any coffee lover!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    <div style="display: flex;flex-direction: column; height: 100%;width: 100%;">
+                                        <div style="display: flex;height: 20%;width: 100%;">
+                                            <div style="width: 23%;">
+                                                <div class="profile"><img src="footerillustrations/download3.jpeg" alt=""></div>
+                                            </div>
+                                            <div style="width: 77%;display: flex;flex-direction: column;padding-left: 25px;">
+                                                    <div style="height: 40%;width: 100%;display: flex;align-items: flex-start;justify-content: flex-start;padding-left: 8px;padding-bottom: 20px; ">
+                                                        <p>ESHAN_PARESHAN</p>
+                                                    </div>
+                                                    <div style="height: 60%;width: 100%;" class="stars">
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-regular fa-star fa-2x"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div style="height: 80%;width: 100%;text-align: justify;display: flex;align-items: center;justify-content: center;padding-top: 3vh;">
+                                            <p style="width: 100%;height: 100%;padding: 2vh;">
+                                                BREWFACTORY has a nice array of coffee beans that will take your taste buds on a world tour! The quality of the beans is pretty good! <br> <br>Prices might make you raise an eyebrow, but hey, you’re paying for some fancy flavors. The customer service team is friendly and ready to help, though your coffee might take a bit longer to arrive than you'd like. All in all, BREWFACTORY is a fun spot to explore new coffee adventures!
+                
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    <div style="display: flex;flex-direction: column; height: 100%;width: 100%;">
+                                        <div style="display: flex;height: 20%;width: 100%;padding-top: vh;">
+                                            <div style="width: 23%;">
+                                                <div class="profile"><img src="footerillustrations/Problems dreamdream.jpeg" alt=""></div>
+                                            </div>
+                                            <div style="width: 77%;display: flex;flex-direction: column;padding-left: 25px;">
+                                                    <div style="height: 40%;width: 100%;display: flex;align-items: flex-start;justify-content: flex-start;padding-left: 8px; padding-bottom: 20px;">
+                                                        <p>ARVI_JAVAPHILE</p>
+                                                    </div>
+                                                    <div style="height: 60%;width: 100%;" class="stars">
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-solid fa-star fa-2x"></i>
+                                                        <i class="fa-regular fa-star fa-2x"></i>
+                                                        <i class="fa-regular fa-star fa-2x"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div style="height: 80%;width: 100%;text-align: justify;display: flex;align-items: center;justify-content: center;padding-top: 3vh;">
+                                            <p style="width: 100%;height: 100%;padding: 2vh;">
+                                                BREWFACTORY is a delightful little corner of the internet for coffee lovers! Their selection of beans is impressive, taking you on a global coffee journey. The website is a breeze to navigate, though the prices might make you do a double-take. <br> <br> Be prepared to practice some patience withshipping times. Overall, BREWFACTORY is a great place to find your next coffee obsession, with a bit of room for improvement.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="butn" id="leftarrow-btn" onclick=""> 
+                                    <i class="ri-arrow-left-line"></i> 
+                            </div>  
+                        </div>
+                        </div>
+                        <div class="bottom">
+                        <h1 class="bottom-h1">REVIEWS</h1>
+                        </div>
+                  </div>
+                </div>
+            </section>
+            <div style="height: 100vh;">
+
+            </div>
+            <!-- FOOTER -->
+            <section class="section5" >
+                    
+                    <div class="footer-container">
+                        
+                        <div class="footer-links" >
+                            <div class="links" style="height: 70%;width: 100%;">
+                                <div style="display: flex; flex-direction: column; margin-left: 1vh;" > 
+                                    <h4>BREWFACTORY</h4>
+                                    <a href="about.html" class="footlink">ABOUT</a>
+                                    <a href="coffee.html" class="footlink">COFFEE</a>
+                                    <a href="" class="footlink">BREWING GUIDE</a>
+                                    <a href="" class="footlink">CONTACT</a>
+                                    
+
+                                </div>
+                                <div style="display: flex;flex-direction: column;">
+                                    <h4>PRODUCTS</h4>
+                                    <a href="coffee.html" class="footlink">COFFEE BEANS</a>
+                                    <a href="coffee.html" class="footlink">COFFEE POWDER</a>
+                                    <a href="coffee.html" class="footlink">INSTANT COFEE KITS</a>
+                        
+                                </div>
+                                <div  style="display: flex; flex-direction: column; "> 
+                                    <h4>MERCHANDISE</h4>
+                                    <a href="merchpage.html" class="footlink">CLOTHES</a>
+                                    <a href="merchpage.html" class="footlink">MUGS</a>
+                                    <a href="merchpage.html" class="footlink">TUMBLERS</a>
+                                    <a href="merchpage.html" class="footlink">BOTTLES</a>
+                                </div>
+                                <div style="display: flex; flex-direction: column;margin-right: 5vh;">
+                                    <h4> EQUIPMENT</h4>
+                                    <a href="cof" class="footlink">FRENCH PRESS</a>
+                                    <a href="cof" class="footlink"> POUR OVER </a>
+                                    <a href="cof" class="footlink"> AERO PRESS </a>
+                                    <a href="cof" class="footlink"> STOVE TOP </a>
+                                    <a href="cof" class="footlink">SYPHONE</a>
+                                </div>
+
+
+                            </div>
+                            <div  class="footer-icons">
+                                <div><i class="fa-brands fa-twitter fa-2x"></i></div>
+                                <div><i class="fa-brands fa-instagram fa-2x"></i></div>
+                                <div><i class="fa-brands fa-facebook fa-2x"></i></div>
+                                <div><i class="fa-brands fa-linkedin fa-2x"></i></div>
+                                
+
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="newsletter" >
+                            <div style="display: flex; align-items: left;justify-content: left;">
+                                <p class="p">SUBSCRIBE TO OUR NEWSLETTER</p>
+                            </div>
+                            <div style="display: flex; align-items: left; justify-content: center;">
+                                <p>SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES  ABOUT ALL THINGS COFFEE AND BREW FACTORY. <br><br> STAY ON TOP OF THINGS WITH JUST ONE CLICK!</p>
+                            </div>
+                            
+                            <div class="email-box">
+                                <input type="email" id="email" placeholder="ENTER YOUR EMAIL">
+                                <label for="email">
+                                <button onclick="focusInput()" > <i class="fa-regular fa-envelope fa-2x"></i></button>
+                                </label>
+                            </div>
+                            
+
+                        
+                        </div>
+
+                    </div>
+            </section>
+            <!-- COPYRIGHT-->
+            <div class="copyright">
+                    &copy  2024 COPYRIGHT: BREWFACTORY.COM
+            </div>
+
+            </div>
+         </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/split-type"></script>
+
+  
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Initialize Locomotive Scroll
+                const locoScroll = new LocomotiveScroll({
+                    el: document.querySelector('.main'),
+                    smooth: true
+                });
+
+                // Update ScrollTrigger on scroll events
+                locoScroll.on("scroll", ScrollTrigger.update);
+
+                // Proxy methods for ScrollTrigger to work with Locomotive Scroll
+                ScrollTrigger.scrollerProxy(".main", {
+                    scrollTop(value) {
+                        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+                    },
+                    getBoundingClientRect() {
+                        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+                    },
+                    pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+                });
+
+                // Ensure everything is refreshed on Locomotive Scroll and ScrollTrigger
+                ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+                // Initialize GSAP animations with ScrollTrigger
+                function initGSAP() {
+                    gsap.to(".navigation", {
+                        scrollTrigger: {
+                            trigger: ".navigation",
+                            scroller: ".main",
+                            start: "top top",
+                            end: "bottom top",
+                            scrub: true,
+                            onEnter: () => document.querySelector('.navigation').classList.add("sticky"),
+                            onLeaveBack: () => document.querySelector('.navigation').classList.remove("sticky")
+                        }
+                    });
+
+                    gsap.from(".maintag,.subtag,.calltoaction,.logo,.icons,nav ul", {
+                        y: 50,
+                        opacity: 0,
+                        delay: 0.4,
+                        stagger: 0.3
+                    });
+
+
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".pin",
+                        scroller: ".main",
+                        start: "top 10%",
+                        end: "top -100%",
+                        scrub: 2,
+                        pin: true,
+                        onEnter: () => document.querySelector('.main').style.background = '#000',
+                        onEnterBack: () => document.querySelector('.main').style.background = '#000'
+                    }
+                });
+
+                tl.to(".pin .innerpin", {
+                    xPercent: -90,
+                    duration: 5,
+                    delay: 1
+                });
+
+                tl.from(".latestarrivalssection .elem", {
+                    opacity: 0,
+                    y: 50,
+                    stagger: 0.3,
+                    duration: 1.5,
+
+                    scrollTrigger: {
+                        trigger: ".latestarrivalssection",
+                        scroller: ".main",
+                        start: "top 80%",
+                        end: "top 20%",
+                        scrub: 3
+                    }
+                });
+               const mytext = new SplitType('#mytext');
+                tl.to('.char', {
+                opacity: 1,
+                y: 0,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: 0.1,
+                scrollTrigger: {
+                    trigger: '.categoriesnew',
+                    scroller: '.main',
+                    scrub: 2,
+                    start: 'top top+=500px',
+                    end: 'top top+=400px'
+                }
+            });
+
+            const mytext1 = new SplitType('#mytext1');
+            tl.to('.char', {
+                opacity: 1,
+                y: 0,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: 0.1,
+                scrollTrigger: {
+                    trigger: '.categoriesnew',
+                    scroller: '.main',
+                    scrub: 2,
+                    start: 'top top+=500px',
+                    end: 'top top+=400px'
+                }
+            });
+
+            const mytext2 = new SplitType('#mytext2');
+            tl.to('.char', {
+                opacity: 1,
+                y: 0,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: 0.2,
+                scrollTrigger: {
+                    trigger: '.categoriesnew',
+                    scroller: '.main',
+                    scrub: 2,
+                    start: 'top top+=500px',
+                    end: 'top top+=400px'
+                }
+            });
+
+                const tl1 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".outer",
+                        scroller: ".main",
+                        start: "50% 50%",
+                        end: "150% 50%",
+                        scrub: 2,
+                        pin: true
+                    }
+                });
+
+                gsap.from(".section3 .row1a .prod", {
+                    opacity: 0,
+                    y: 50,
+                    stagger: 0.3,
+                    duration: 1.5,
+
+                    scrollTrigger: {
+                        trigger: ".section3",
+                        scroller: ".main",
+                        start: "top 80%",
+                        end: "top 20%",
+                        scrub: 3
+                    }
+                });
+
+                const prods = document.querySelectorAll('.prod');
+
+                prods.forEach((prod, index) => {
+                    const title = prod.querySelector('.title');
+
+                    // Set initial position class
+                    if (index % 2 === 0) {
+                        title.classList.add('title-above');
+                    } else {
+                        title.classList.add('title-below');
+                    }
+
+                    prod.addEventListener('mouseenter', () => {
+                        gsap.to(title, {
+                            opacity: 1,
+                            y: index % 2 === 0 ? -20 : 20, // Adjust the direction based on index
+                            duration: 0.3
+                        });
+                    });
+
+                    prod.addEventListener('mouseleave', () => {
+                        gsap.to(title, {
+                            opacity: 0,
+                            y: 0,
+                            duration: 0.3
+                        });
+                    });
+                });
+
+                tl1.to(".center", { height: "100vh" }, 'a')
+                .to(".top", { top: "-50%" }, 'a')
+                .to(".bottom", { bottom: "-50%" }, 'a')
+                .to(".top-h1", { top: "60%" }, 'a')
+                .to(".bottom-h1", { bottom: "-30%" }, 'a')
+                .to(".center h1", { top: "-30%" }, 'a')
+                .to(".content1A", { delay: -0.2, marginTop: "0%" });
+
+                // Event listeners for navigation and reviews
+                const arrowBtn = document.getElementById("arrow-btn");
+                arrowBtn.addEventListener("click", () => {
+                    gsap.to(".content1A", {
+                        opacity: 0,
+                        duration: 0.5,
+                        onComplete: () => {
+                            document.querySelector(".content1A").style.display = "none";
+                            document.querySelector(".reviews").style.display = "flex";
+                        }
+                    });
+                    gsap.fromTo(".review-card", {
+                        opacity: 0,
+                        x: 100,
+                    }, {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.5,
+                        stagger: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                const leftArrowBtn = document.getElementById("leftarrow-btn");
+                leftArrowBtn.addEventListener("click", () => {
+                    gsap.to(".reviews", {
+                        opacity: 0,
+                        duration: 0.5,
+                        onComplete: () => {
+                            document.querySelector(".reviews").style.display = "none";
+                            document.querySelector(".content1A").style.display = "flex";
+                            gsap.to(".content1A", {
+                                opacity: 1,
+                                duration: 0.5
+                            });
+                            gsap.set(".review-card", {
+                                opacity: 1,
+                                x: 100
+                            });
+                        }
+                    });
+                });
+
+                const video = document.querySelector('.banner-animation');
+                const h1 = document.querySelector('.discount-banner h1');
+                const span = document.querySelector('.discount-banner h1 .color-change-part');
+                const discountBanner = document.querySelector('.discount-banner');
+
+                // Set up the ScrollTrigger animation
+                const tl2 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.section2-5',
+                        scroller:'.main',
+                        start: 'top center', // Adjust the start position as needed
+                        end: 'bottom center', // Adjust the end position as needed
+                        scrub: true,
+                        onEnter: () => {
+                            video.play();
+                            gsap.to(discountBanner, { backgroundColor: 'transparent', duration: 1 });
+                        },
+                        onLeave: () => {
+                            video.pause();
+                            video.currentTime = 0;
+                            gsap.to(discountBanner, { backgroundColor: 'black', duration: 1 });
+                        },
+                        onEnterBack: () => {
+                            video.play();
+                            gsap.to(discountBanner, { backgroundColor: 'transparent', duration: 1 });
+                        },
+                        onLeaveBack: () => {
+                            video.pause();
+                            video.currentTime = 0;
+                            gsap.to(discountBanner, { backgroundColor: 'black', duration: 1 });
+                        }
+                    }
+                });
+                tl2.to(h1, { 
+                    duration: 6, // 3 seconds delay + 3 seconds for the actual color change
+                    className: '+=color-change', 
+                    delay: 3 
+                })
+                .to(span, { 
+                    duration: 6, // 3 seconds delay + 3 seconds for the actual color change
+                    className: '+=color-change', 
+                    delay: -6 
+                })
+                .to(h1, { 
+                    duration: 0.5, 
+                    className: '+=color-changer', 
+                    delay: 6 
+                });
+
+                
+            }
+
+            // Initialize GSAP animations
+            initGSAP();
+
+            // Refresh everything after initialization
+            ScrollTrigger.refresh();
+
+            // Ensure Locomotive Scroll updates on window resize
+            window.addEventListener('refresh', function() {
+                locoScroll.update();
+            });
+        });
+
+        </script>
+ 
+        <script>
+            function cart(){
+                window.alert('ITEM IS ADDED TO CART!')
+            }
+        </script>
+          
+
+    </body>
+</html>

@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="icon" href="footerillustrations/BREW FACTORY2.png">
+    <link rel="stylesheet" href="cssfiles/searchbaranimation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: Hamburg Hand;
+            src: url(HamburgHand-Light.otf);
+        }
+
+        @font-face {
+                font-family: Recton;
+                src: url(RectonBold1.ttf);
+        }
+
+        @font-face {
+                font-family: Roundo;
+                src: url('Roundo-Light.otf') format('opentype');
+        }
+        @font-face{
+            font-family: Gilroy;
+            src: url(gg.otf);
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        nav{
+            height: 100px;
+            background-color:transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            width: 117%;
+            background-color: #0000006b;
+        }
+        .logoclass{
+            height: 100%;
+            width: 250px;
+        }
+        .logoclass img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .navigation_menu{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0;
+            padding-right: 0;
+            margin-left: 21vh;
+        }
+        .navigation_menu ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navigation_menu ul li{
+            list-style-type: none;
+            margin-right: 28px;
+        }
+        .navigation_menu ul li a{
+            text-decoration: none;
+            color: #F3e3d3;
+            font-family: Recton;
+            font-size: 1.45em;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        .navicons{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-right: 30px;
+                margin-bottom: 20px;
+                margin-top: 2vh;
+                padding: 10px;
+        }
+        .icons:hover{
+                cursor: pointer;
+                
+        }
+        .carticon{
+                padding-bottom: 10px;
+        }
+        .carticon:hover{
+                #circle{
+                fill: #F3E3D3;
+        }
+
+        }
+        .usericon{
+                padding-bottom: 5px;
+                transition: fill 0.8s ease;
+            
+        }
+        .usericon:hover{
+                path{
+                    fill: #F3E3D3;
+                }
+                #ud{
+                    fill: #F3E3D3;
+                }
+            }
+        .searchicon{
+                padding-right: 40px;
+                padding-bottom: 12px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-24%,-24%);                
+            }
+        .nav_link:hover{
+                color: #feccba;
+                cursor: pointer;
+            }
+        .nav_link::after{
+                content: '';
+                height: 2px;
+                width: 0;
+                background: #F3E3D3;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition: all 0.5s;
+                pointer-events: none;
+
+            }
+        .nav_link:hover::after{
+                width: 100%;
+            }
+        
+    /* FOOTER SECTION STYLES*/
+        .section5{
+            height: 50vh;
+            background-color: #f0e1c9;
+        }
+        .section5 {
+            background-image: url(footerillustrations/coffee6A.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 0% 10%;
+        }
+        .copyright{
+            height: 7vh;
+            background-color: #dccdb5 ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Montserrat;
+        }
+        .footer-container{
+            background-color: #f0e1c9;
+            height: 100%;
+            width: 77%;
+            transform: translateX(30%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .newsletter{
+            height: 100%;
+            width: 42%;
+            
+            font-family: Montserrat;
+        }
+        .newsletter .p{
+            padding-top: 4vh;
+            font-size: 1.8em;
+            
+        }
+        .newsletter p{
+            font-size: 1em;
+            padding-left: 2vw;
+            
+        }
+        .newsletter input{
+            
+            padding-bottom: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            width: 70%;
+            margin-left: 2vw;
+            transition: all 0.3s ease;
+        }
+        .email-box{
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            
+        }
+        #email{
+            border: none;
+            font-family: Montserrat;
+            
+        }
+        #email::placeholder{
+            color: #4E312D;
+        }
+        #email:focus{
+            outline: none;
+            background-color: #dccdb5;
+
+
+        }
+        .newsletter button{
+            margin-left: 15px;
+            padding: 14px;
+            border: none;
+            background-color: #FCCB9A;
+        }
+        .newsletter button:hover{
+            cursor: pointer;
+
+        }
+        .footer-links{
+            
+            height: 100%;
+            width: 58%;
+            font-family: Montserrat;
+        }
+        .links {
+                display: flex;
+                align-items: top;
+                justify-content: space-between;   
+                padding-top: 6.1vh; 
+                            
+        }
+        .links a{
+            text-decoration: none;
+            color: #4E312D;
+            margin-bottom: 2.3vh; 
+            transition: all 0.5s ease;
+            
+        }
+        .links a:hover{
+            transform: translateX(8px);
+        }
+        .footer-icons{
+            
+            height: 30%;
+            width: 100%;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+
+
+            
+        }
+        .footer-icons i{
+            margin-right: 5vh;
+            transition: all 0.5s ease-in-out;
+            color: #4E312D;
+        }
+        .footer-icons i:hover{
+            transform: translateY(-7px);
+            cursor: pointer;
+            color: #999786;
+        }
+        /*slider styles*/
+     
+        .slider {
+            width: 100%;
+            height: 95vh;
+        
+            position: relative;
+            overflow: hidden;
+        }
+        .slider .list {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            transition: transform 1s;
+        }
+        .slider .list .item {
+            display: flex;
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .slider .list .item .text-container {
+            width: 40%;
+            height: 100%;
+            font-family: Montserrat;
+           
+        }
+        .slider .list .item .text-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            transform: scaleX(-1);
+        }
+
+        .slider .list .item img {
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 55% 69%;
+        }
+        .slider .buttons {
+            position: absolute;
+            top: 45%;
+            padding-left: 3vh;
+            padding-right: 3vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .slider .buttons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background:transparent;
+            border: none;
+            transition: 0.7s;
+        }
+        .slider .buttons button:hover{
+            cursor: pointer;
+        }
+        .slider .dots {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            color: #fff;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .slider .dots li {
+            list-style: none;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            margin: 10px;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .slider .dots li:hover{
+            cursor: pointer;
+        }
+        .slider .dots li.active {
+            width: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            .slider {
+                height: 400px;
+            }
+            .slider .list .item {
+                flex-direction: column;
+            }
+            .slider .list .item .text-container,
+            .slider .list .item img {
+                width: 100%;
+            }
+        }
+        #herobutton1{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.5vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton1:hover{
+            background-color: #B1C07A;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton2{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.5vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton2:hover{
+            background-color: #C28B4C;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton3{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.5vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton3:hover{
+            background-color: #113D56;
+            cursor: pointer;
+        }
+        #herobutton5{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-23.3vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton5:hover{
+            background-color: #EE9C76;
+            color: #000;
+            cursor: pointer;
+        }
+        #herobutton6{
+            padding: 20px 45px;
+            background-color: #000;
+            color: white;
+            font-family: Montserrat;
+            transform: translateX(-13.3vh);
+            transition: all 0.7s ease;
+            border: none;
+        }
+        #herobutton6:hover{
+            background-color: #EE9C76;
+            color: #000;
+            cursor: pointer;
+        }
+        .row1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85vh;
+            width: 100%;
+            padding: 5vh;
+            padding-left: 10vh;
+            padding-right: 10vh;
+            
+        }
+        .prod{
+            height: 100%;
+            width : 23.7%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            
+        }
+        .imgcontainer{
+            height: 100%;
+            width:100% ;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .prod img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            
+        }
+        .row2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80vh;
+            width: 100%;
+            padding: 5vh;
+            padding-left: 10vh;
+            padding-right: 10vh;
+            margin-bottom: 10vh;
+            
+        }
+        .prod2{
+            height: 100%;
+            width : 22%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3vh;
+            
+        }
+        .prod2 img{
+            height: 78%;
+            object-fit: cover;
+            
+        }
+        .pro-details{
+            height: 20%;
+            width: 100%;
+            font-family: Space Grotesk;
+            font-weight: 500;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row2{
+            height: 125vh;
+            padding: 0vh 10vh;
+        }
+        .gift{
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        .gif{
+            height: 100%;
+            width: 40%;
+        }
+        .gif img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .col{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 7vh;
+        }
+        .row11{
+           height: 50%;
+           display: flex;
+           gap: 5vh;
+
+        }
+        .prod1{
+           height: 100%;
+           width: 50%;
+           background-color: #fff;
+           
+        }
+        .prod1 img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+        .price{
+            height: 50px;
+            width: 100px;
+            background-color: #f0e1c9;
+            z-index: 1;
+            position: absolute;
+            padding-left: 8px;
+            display: flex;
+        }
+        .price span{
+            font-family: Roundo;
+            padding-top: 11.5px;
+            padding-left: 6px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .title {
+            opacity: 0;
+            font-size: 1.7em;
+            font-weight: 100;
+            color: #f0e1c9;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            font-family: Tokyo dreams;
+            padding-bottom: 3vh;
+        }
+
+        .title-above {
+            position: absolute;
+            bottom: 100%; /* Position the title above the image */
+        }
+
+        .title-below {
+            position: absolute;
+            margin-top: 3vh;
+            top: 100%; /* Position the title below the image */
+        }
+        .row311{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85vh;
+            width: 100%;
+            padding: 5vh;
+            padding-left: 10vh;
+            padding-right: 10vh;
+            
+        }
+        .p1{
+            height: 100%;
+            width : 23.7%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            
+        }
+        .p1 .imgcontainer{
+            height: 100%;
+            width:100% ;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .p1 img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            
+        }
+        .p1 img:hover{
+            .heart-icon{
+                opacity: 0;
+            }
+        }
+        .row312{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85vh;
+            width: 100%;
+            padding: 5vh;
+            padding-left: 10vh;
+            padding-right: 10vh;
+            
+        }
+        .p2{
+            height: 100%;
+            width : 23.7%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            
+        }
+        .p2 .imgcontainer{
+            height: 100%;
+            width:100% ;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .p2 img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            
+        }
+        .title1 {
+            opacity: 0;
+            font-size: 1.7em;
+            font-weight: 100;
+            color: #f0e1c9;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            font-family: Tokyo dreams;
+        }
+
+        .title1-above {
+            position: absolute;
+            z-index: 1;
+            bottom: 50%;
+           padding-left: 5vh;
+           color: #fff;
+           font-weight: 400;
+           
+        }
+
+        .title1-below {
+            position: absolute;
+            margin-top: 3vh;
+            top: 100%; /* Position the title below the image */
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+             color: white;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .added-to-cart {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: #fff;
+            display: none;
+            font-family: Roundo;
+        }
+
+        /*.prod:hover .heart-icon {
+            opacity: 0;
+        }*/
+
+
+    </style>
+
+</head>
+<body>
+    <header style="position: fixed;z-index: 9;">
+        <nav>
+            <div class="logoclass">
+                <img src="LOGOS/BREW FACTORY_transparent2.png" alt="">
+            </div>
+            <div class="navigation_menu">
+                <ul>
+                    <li><a href="BREWFACTORY.html" class="nav_link">HOME</a></li>
+                    <li><a href="about.html" class="nav_link">ABOUT</a></li>
+                    <li><a href="coffee.html" class="nav_link">COFFEE</a></li>
+                    <li><a href="coffeeequipment.html" class="nav_link">EQUIPMENT</a></li>
+                    <li><a href="merchpage.html" class="nav_link">MERCHANDISE</a></li>
+                </ul>
+
+            </div>
+            <div class="navicons">
+                <div class="content">
+                    <div class="search">
+                    <input type="text" class="search__input" aria-label="search" placeholder="Search">
+                    <button class="search__submit" aria-label="submit search">
+                            <svg width="130" height="130" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="searchicon">
+                            <rect x="0.5" y="0.5" width="323" height="293" fill="none"/>
+                            <rect x="0.5" y="0.5" width="323" height="293" stroke="none"/>
+                            <path d="M201 116C201 136.319 183.434 153 161.5 153C139.566 153 122 136.319 122 116C122 95.6807 139.566 79 161.5 79C183.434 79 201 95.6807 201 116Z" stroke="#F9E3AF" stroke-width="5"/>
+                            <path d="M233.825 210.932C234.34 211.581 235.284 211.69 235.932 211.175C236.581 210.66 236.69 209.716 236.175 209.068L233.825 210.932ZM183.825 147.932L233.825 210.932L236.175 209.068L186.175 146.068L183.825 147.932Z" fill="#F9E3AF" stroke-width="5"/ >
+                        </svg></i></button>
+                    </div>
+                </div>  
+
+                <svg width="80" height="80" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="carticon" >
+                    <rect width="324" height="294" fill="none"/>
+                    <circle cx="146" cy="208" r="14.55" stroke="#F9E3AF" stroke-width="5" id="circle"/>
+                    <circle cx="196" cy="208" r="14.55" stroke="#F9E3AF" stroke-width="5" id="circle"/>
+                    <path d="M76.5 100H82.7207C91.3385 100 99.0815 105.265 102.25 113.279L105.5 121.5M228 182H133.298C127.737 182 122.792 178.463 120.995 173.201L117 161.5M105.5 121.5L220.476 122.822C228.331 122.912 233.982 130.4 231.915 137.978L229.318 147.499C227.064 155.765 219.556 161.5 210.988 161.5H117M105.5 121.5L117 161.5" stroke="#F9E3AF" stroke-width="5" />
+                </svg>
+    
+
+            <a href="formnew.html">
+                <svg width="75" height="75" viewBox="0 0 324 294" fill="none" xmlns="http://www.w3.org/2000/svg" class="usericon" id="usericon"> 
+                    <rect x="0.5" y="0.5" width="323" height="293" fill="none"/>
+                    <rect x="0.5" y="0.5" width="323" height="293" stroke="none"/>
+                    <path d="M202 116C202 136.319 184.434 153 162.5 153C140.566 153 123 136.319 123 116C123 95.6807 140.566 79 162.5 79C184.434 79 202 95.6807 202 116Z" stroke="#F9E3AF" stroke-width="5"/>
+                    <rect x="93.5" y="168.5" width="138" height="56" rx="28" stroke="#F9E3AF" stroke-width="5"/ id="ud">
+                </svg>
+            </a>
+
+        </div>
+        </nav>
+    </header>
+    <div class="main1" >
+        <section style="height: 100vh;">
+
+            <div class="slider" style="position: relative;z-index: 1;height: 100%;">
+                <div class="list">
+                    <div class="item">
+                        <div class="text-container" style="display: flex;position: relative;">
+                            <img src="PRODUCT PAGE/col.jpg" alt="" style="z-index: -1;position: relative;">
+                            <div style="z-index:1;color: #000;position: absolute;display: flex;flex-direction: column;align-items: center;width: 100%;height: 100%;justify-content: flex-start;padding-left: 15vh;padding-top: 20vh;transform: translateY(10vh);">
+                                <p style="font-size: 2.3em;padding-bottom: 0;margin-bottom: 3vh;" >Discover Brazilian Coffee: Rich. Smooth. Unforgettable.</p>
+                                <p style="margin-bottom: 4vh;">Experience the essence of Brazil with our exceptional coffee blend. Indulge in its rich flavor and smooth texture, crafted to perfection from the finest Brazilian beans. Elevate your coffee ritual with every sip.</p>
+                                <div>
+                                    <button id="herobutton1">
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                        <img src="PRODUCT PAGE/10_Brazil_2x.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <div class="text-container" style="position: relative;display: flex;flex-direction: column;" >
+                            <div style="width: 100%;height: 30%;">
+                                <img src="PRODUCT PAGE/2.jpg" alt="" style="position: relative;z-index: -1;">
+                            </div>
+                            <div style="width: 100%;height: 30%;">
+                                <img src="PRODUCT PAGE/2.jpg" alt="" style="position: relative;z-index: -1;">
+                            </div>
+                            <div style="width: 100%;height: 30%;">
+                                <img src="PRODUCT PAGE/2.jpg" alt="" style="position: relative;z-index: -1;">
+                            </div>
+                            <div style="width: 100%;height: 10.5%;">
+                                <img src="PRODUCT PAGE/2.jpg" alt="" style="position: relative;z-index: -1;">
+                            </div>
+                            <div style="z-index:1;color: #000;position: absolute;display: flex;flex-direction: column;align-items: center;width: 100%;height: 100%;justify-content: flex-start;padding-left: 15vh;padding-top: 20vh;transform: translateY(11vh);">
+                                <p style="font-size: 2.3em;padding-bottom: 0;margin-bottom: 3vh;background-color:#CDBFA2 ;">Introducing the Global Coffee Set: Rwanda, Guatemala, Nicaragua</p>
+                                <p style="margin-bottom: 4vh;">Embark on a journey across continents with our exclusive Global Coffee Set. From the lush hills of Rwanda to the volcanic soils of Guatemala and the tropical landscapes of Nicaragua, each coffee offers a unique and flavorful experience. Savor the distinct aromas and tastes of these renowned coffee regions, meticulously curated to delight your senses.</p>
+                                <div>
+                                    <button id="herobutton2">
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <img src="PRODUCT PAGE/Group 11.png" alt="" >
+                    </div>
+                    <div class="item">
+                        <div class="text-container" style="display: flex;position: relative;">
+                                <img src="PRODUCT PAGE/col3.jpg" alt="" style="position: relative;">
+                                <div style="z-index:1;color: #000;position: absolute;display: flex;flex-direction: column;align-items: center;width: 100%;height: 100%;justify-content: flex-start;padding-left: 15vh;padding-top: 20vh;transform: translateY(11vh);">
+                                    <p style="font-size: 2.3em;padding-bottom: 0;margin-bottom: 3vh;">Introducing the World Coffee Trio: Ethiopia, Guatemala, Colombia</p>
+                                    <p style="margin-bottom: 4vh;line-height: 2.5vh;">Experience a world of flavor with our World Coffee Trio. From the birthplace of coffee in Ethiopia to the highlands of Guatemala and the rich soils of Colombia, each blend delivers a unique and captivating taste. Delight in the vibrant notes and aromatic profiles that define these iconic coffee regions. Elevate your coffee journey with every sip.</p>
+                                    <div>
+                                        <button id="herobutton3">
+                                            ADD TO CART
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        <img src="PRODUCT PAGE/Group 10.png" alt="" >
+                    </div>
+                    <div class="item">
+                        <img src="PRODUCT PAGE/Group 12.png" alt="">
+                        <div class="text-container" style="display: flex;transform: scaleX(1);">
+                                <img src="PRODUCT PAGE/col4.jpg" alt="" style="position: relative;">
+                                <div style="z-index:1;color: #000;position: absolute;display: flex;flex-direction: column;align-items: center;width: 100%;height: 100%;justify-content: flex-start;padding-right: 15vh;padding-top: 20vh;transform: translateY(11vh);">
+                                    <p style="font-size: 2.3em;padding-bottom: 0;margin-bottom: 3vh;">Peruvian Medium Roast Trio: Smooth. Rich. Authentic.</p>
+                                    <p style="margin-bottom: 4vh;line-height: 2.5vh;">Experience the rich, full-bodied flavor of our premium Peruvian Medium Roast Coffee. Carefully crafted from high-altitude beans, this medium roast offers a perfect balance of smooth chocolate notes and a hint of citrus. Enjoy the convenience and quality of three packs, perfect for daily brewing or sharing with friends. Elevate your coffee ritual with the authentic taste of Peru."</p>
+                                    <div>
+                                        <button id="herobutton5">
+                                            ADD TO CART
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                        <img src="PRODUCT PAGE/72c2c370480219.5ba4afca8857b.jpg" alt="" " style="width: 70%;object-position: bottom;">
+                        <div class="text-container" style=" width: 30%;display:flex; position: relative;" >
+                            <img src="PRODUCT PAGE/col6.jpg" alt="" style="object-fit: fill;object-position: right;transform: scaleX(-1);object-position: 50% 79%;position: relative;z-index: -1;object-position: bottom;background-color: #F8B479;">
+                            <div style="z-index:1;color: #000;position: absolute;display: flex;flex-direction: column;align-items: center;width: 100%;height: 100%;justify-content: flex-start;padding-top: 20vh;transform: translateY(11vh);">
+                                <p style="font-size: 2.3em;padding-bottom: 0;margin-bottom: 3vh;color: #fff;">Discover Kenyan Coffee: Bold. Vibrant. Unmatched.</p>
+                                <p style="margin-bottom: 4vh;line-height: 2.5vh;color: #fff;">Experience the rich, full-bodied flavor of our premium Kenyan coffee. Grown in the fertile highlands, this exceptional blend features bright acidity, fruity undertones, and a smooth finish. Elevate your coffee ritual with the unparalleled taste of Kenya in every sip.</p>
+                                <div>
+                                    <button id="herobutton6">
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Duplicated first item -->
+                    <div class="item">
+                        <div class="text-container">
+                            <p>Text content here</p>
+                        </div>
+                        <img src="PRODUCT PAGE/10_Brazil_2x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev">
+                        <i class="ri-arrow-left-line ri-2x"></i>
+                    </button>
+                    <button id="next">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                    </button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section style="height: 700vh;background-color: #000;" data-scroll-container>
+            <div style="display: flex;align-items: center; justify-content: center;height: 2%;" class="prosection">
+                <p style="font-size: 2em;font-family: montserrat;color: #f0e1c9;">PRODUCTS</p>
+            </div>
+            <div style="height: 98%;" >
+                <!-- first row of four products-->
+                <div class="row1"data-scroll data-scroll-speed="0.9">    
+                    <div class="prod">
+                        <div class="imgcontainer">
+                            <div class="title">Guatemala Coffee - Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee4.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1500</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+                    </div>
+                    
+                    <div class="prod">
+                        <div class="imgcontainer">
+                            <div class="title">Kenya Coffee - Washed Process, Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee5.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1400</span>
+
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <div class="prod">
+                        <div class="imgcontainer">
+                            <div class="title">Colombia Coffee - Natural Process, Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee6.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1599</span>
+
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <div class="prod">
+                        <div class="imgcontainer">
+                            <div class="title">Kenya Coffee - Washed Process, Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee7.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1400</span>
+
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <!--first single product big.-->
+                <div style="height: 76vh;padding-left: 10vh;padding-right: 10vh;padding-top: 10vh;display: flex;margin-bottom: 10vh;" class="single1">
+                    <div  style="width: 74%;display: flex;position: relative;">
+                        <div class="price" style="bottom: 0;left: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"  ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                            <span>1799</span>
+
+                        </div>
+                        <img src="PRODUCT PAGE/Group 11.png" alt="" style="height: 100%;width: 100%;object-fit: cover;">
+                    </div>
+                    <div style="height: 100%;width: 26%;background-color: #f0e1c9; font-family: Roundo;font-size: 2em;padding:3vh;">
+                             <p>
+                                3 in 1 COMBO PACK - RED BONSUAN, CATUARA, CATUAI BLENDS
+                             </p>
+                              <p style="font-size: 15px;">
+                                Embark on a journey across continents with our exclusive Global Coffee Set. From the lush hills of Rwanda to the volcanic soils of Guatemala and the tropical landscapes of Nicaragua, each coffee offers a unique and flavorful experience. Savor the distinct aromas and tastes of these renowned coffee regions, meticulously curated to delight your senses
+                              </p>
+                              <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#C2713D;margin-bottom: 10px;display: inline-block;"></div>
+                                <p style="display: inline-block;font-size: 15px;transform: translateY(-8px);padding-left: 7px;"> WASHED</p>
+                              </div>
+                              <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div style="height: 20px;width: 20px; border-radius: 10px;background-color: #7FA667;margin-bottom: 10px;display: inline-block;"></div>
+                                <p style="display: inline-block;font-size: 15px;transform: translateY(-8px);padding-left: 7px;"> WASHED</p>
+                              </div>
+                              <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#52A192;margin-bottom: 10px;display: inline-block;"></div>
+                                <p style="display: inline-block;font-size: 15px;transform: translateY(-8px);padding-left: 7px;">NATURAL</p>
+                              </div>
+                    
+                             <button id="herobutton2" style="transform: translate(0);margin-top: 10px;">
+                                ADD TO CART
+                             </button>
+                    </div>
+                </div>
+                <!--second row of four items-->
+                <div class="row311" style="margin-bottom: 10vh;" data-scroll data-scroll-speed="0.9" >
+                    <div class="p1">
+                        <div class="imgcontainer">
+                            <div class="title1">Nicaragua Coffee - Natural, catuai variety</div>
+                            <img src="PRODUCT PAGE/coffee8e.png" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1900</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <div class="p1">
+                        <div class="imgcontainer">
+                            <div class="title1">ethiopian coffee - Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee9.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>2000</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="p1">
+                        <div class="imgcontainer">
+                            <div class="title1">Colombain Coffee - washed, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee10.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1700</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+
+                        </div>
+                        
+                    </div>
+                    <div class="p1">
+                        <div class="imgcontainer">
+                            <div class="title1">Guatemala Coffee - Organic Whole Beans, Single Origin</div>
+                            <img src="PRODUCT PAGE/coffee16.jpeg" alt="">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1500</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- gif and 4 products-->
+                <div class="row2">
+                    <div class="gift">
+                        <div class="gif">
+                            <img src="Equipment/5c1ecf85860199.5d88dd3330438.gif" alt="">
+                        </div>
+                        <div class="col">
+                            <div class="row11">
+                                <div class="prod1" id="gif1">
+                                    <div class="imgcontainer">
+                                        <div class="title">CLASSIC blend</div>
+                                        <img src="PRODUCT PAGE/output-onlinegiftools (1).png" alt="">
+                                        <div class="price">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                            <span>1799</span>
+                
+                                        </div>
+                                        <div class="heart-icon" id="heart1">
+                                            <i class="fas fa-heart heart-icon"></i>
+                                        </div>
+                                        <div class="added-to-cart" id="message1">
+                                            Added to Cart
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                                <div class="prod1" id="gif2">
+                                    <div class="imgcontainer">
+                                        <div class="title">cinnamon blend</div>
+                                        <img src="PRODUCT PAGE/output-onlinegiftools (2).png" alt="">
+                                        <div class="price">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                            <span>1699</span>           
+                                        </div>
+                                        <div class="heart-icon" id="heart1">
+                                            <i class="fas fa-heart heart-icon"></i>
+                                        </div>
+                                        <div class="added-to-cart" id="message1">
+                                            Added to Cart
+                                        </div>
+                                      
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row11" style="padding-top: 2vh;">
+                                <div class="prod1" id="gif3">
+                                    <div class="imgcontainer" >
+                                        <div class="title">decaf blend</div>
+                                        <img src="PRODUCT PAGE/output-onlinegiftools.png" alt="">
+                                        <div class="price">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                            <span>1899</span>
+                
+                                        </div>
+                                        <div class="heart-icon" id="heart1">
+                                            <i class="fas fa-heart heart-icon"></i>
+                                        </div>
+                                        <div class="added-to-cart" id="message1">
+                                            Added to Cart
+                                        </div>
+                                      
+                
+                                    </div>
+
+                                </div>
+                                <div class="prod1" id="gif4">
+                                    <div class="imgcontainer">
+                                        <div class="title">espresso blend</div>
+                                        <img src="Equipment/frame_2_delay-0.75s.gif" alt="">
+                                        <div class="price">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                            <span>2000</span>
+                                        </div>
+                                        <div class="heart-icon" id="heart1">
+                                            <i class="fas fa-heart heart-icon"></i>
+                                        </div>
+                                        <div class="added-to-cart" id="message1">
+                                            Added to Cart
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--row of 2 products-->
+                <div class="row312">
+                    <div class="p2" style="width: 49%;padding: 0;">
+                        <div class="imgcontainer">
+                            <img src="PRODUCT PAGe/72c2c370480219.5ba4afca8857b.jpg" alt="" style="width: 100%; height: 100%;">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1799</span> 
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                            <div class="title1">kenyan coffee - washed and roasted,single origin whole beans</div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="p2" style="width: 49%;padding: 0;">
+                        <div class="imgcontainer">
+                            <img src="PRODUCT PAGE/10_Brazil_2x.jpg" alt="" style="width: 100%;">
+                            <div class="price">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                                <span>1799</span>
+                            </div>
+                            <div class="heart-icon" id="heart1">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <div class="added-to-cart" id="message1">
+                                Added to Cart
+                            </div>
+                          
+                            <div class="title1">brazilian coffee  - natural proceess,single origin whole beans</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 79vh;padding-left: 10vh;padding-right: 10vh;padding-top: 10vh;display: flex;margin-bottom: 10vh;" class="row313">
+                    <div  style="width: 74%;display: flex;position: relative">
+                        <img src="PRODUCT PAGE/Group 12.png" alt="" style="height: 100%;width: 100%;object-fit: cover;position: relative;">
+                        <div class="price" style="bottom: 0;left: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"  ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                            <span>1799</span>
+                        </div>
+                        <div class="heart-icon" id="heart1">
+                            <i class="fas fa-heart heart-icon"></i>
+                        </div>
+                        <div class="added-to-cart" id="message1">
+                            Added to Cart
+                        </div>
+                    </div>
+                    <div style="height: 100%;width: 26%;background-color: #f0e1c9;margin-bottom: 3vh;">
+                        <div style="height: 100%;width: 100%;background-color: #f0e1c9; font-family: Roundo;font-size: 2em;padding: 2vh;padding: 4vh;">
+                            <p style="font-size: 0.9em;">
+                               3 in 1 COMBO PACK - RED BONSUAN, CATUARA, CATUAI BLENDS
+                            </p>
+                             <p style="font-size: 15px;">
+                                Experience the rich, full-bodied flavor of our premium Peruvian Medium Roast Coffee. Carefully crafted from high-altitude beans, this medium roast offers a perfect balance of smooth chocolate notes and a hint of citrus. Enjoy the convenience and quality of three packs, perfect for daily brewing or sharing with friends. Elevate your coffee ritual with the authentic taste of Peru
+                             </p>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#C2713D;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 15px;"> ETHIOPIA</p>
+                             </div>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color: #7FA667;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 15px;"> GUATEMALA</p>
+                             </div>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#52A192;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 15px;">COLOMBIAN</p>
+                             </div>
+                   
+                            <button id="herobutton5" style="transform: translate(0);margin-top: 10px;">
+                               ADD TO CART
+                            </button>
+                   </div>
+                    </div>
+                    
+                </div>
+                <div style="height: 79vh;padding-left: 10vh;padding-right: 10vh;display: flex;margin-bottom: 10vh;" class="row314">
+                    <div style="height: 100%;width: 26%;background-color: #f0e1c9;padding: 3vh;margin-bottom: 3vh;">
+                        <div style="height: 100%;width: 100%;background-color: #f0e1c9; font-family: Roundo;font-size: 2em;padding: 2vh;">
+                            <p>
+                               3 in 1 COMBO PACK - RED BONSUAN, CATUARA, CATUAI BLENDS
+                            </p>
+                             <p style="font-size: 15px;">
+                               Embark on a journey across continents with our exclusive Global Coffee Set. From the lush hills of Rwanda to the volcanic soils of Guatemala and the tropical landscapes of Nicaragua, each coffee offers a unique and flavorful experience. Savor the distinct aromas and tastes of these renowned coffee regions, meticulously curated to delight your senses
+                             </p>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#C2713D;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 10px;"> ETHIOPIA</p>
+                             </div>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color: #7FA667;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 10px;"> GUATEMALA</p>
+                             </div>
+                             <div style="display: flex;align-items: center;justify-content: flex-start;">
+                               <div style="height: 20px;width: 20px; border-radius: 10px;background-color:#52A192;margin-bottom: 10px;display: inline-block;"></div>
+                               <p style="display: inline-block;font-size: 15px;transform: translateY(-8px); margin-left: 10px;">COLOMBIAN</p>
+                             </div>
+                   
+                            <button id="herobutton3" style="transform: translate(0);margin-top: 10px;">
+                               ADD TO CART
+                            </button>
+                   </div>
+                    </div>
+                    <div  style="width: 74%;display: flex;position: relative"">
+                        <img src="PRODUCT PAGE/Group 10.png" alt="" style="height: 100%;width: 100%;object-fit: cover;">
+                        <div class="price" style="bottom: 0;right: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="50px" width="12px"  ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.3c27.3 0 48.3 10 61 27.3H12c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h158.8c-6.2 36.1-33 58.6-74.8 58.6H12c-6.6 0-12 5.4-12 12v53c0 3.3 1.4 6.5 3.9 8.8l165.1 152.4a12 12 0 0 0 8.1 3.2h82.6c10.9 0 16.2-13.4 8.1-20.8L116.9 319.9c76.5-2.3 131.1-53.4 138.3-127.9H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-58.7c-3.5-11.5-8.3-22.2-14.3-32H308z"/></svg>
+                            <span>1799</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <section class="section5" >
+                
+            <div class="footer-container">
+                
+                <div class="footer-links" >
+                    <div class="links" style="height: 70%;width: 100%;">
+                        <div style="display: flex; flex-direction: column; margin-left: 1vh;" > 
+                            <h4>BREWFACTORY</h4>
+                            <a href="about.html" class="footlink">ABOUT</a>
+                            <a href="coffee.html" class="footlink">COFFEE</a>
+                            <a href="" class="footlink">BREWING GUIDE</a>
+                            <a href="" class="footlink">CONTACT</a>
+                            
+
+                        </div>
+                        <div style="display: flex;flex-direction: column;">
+                            <h4>PRODUCTS</h4>
+                            <a href="coffee.html" class="footlink">COFFEE BEANS</a>
+                            <a href="coffee.html" class="footlink">COFFEE POWDER</a>
+                            <a href="coffee.html" class="footlink">INSTANT COFEE KITS</a>
+                
+                        </div>
+                        <div  style="display: flex; flex-direction: column; "> 
+                            <h4>MERCHANDISE</h4>
+                            <a href="merchpage.html" class="footlink">CLOTHES</a>
+                            <a href="merchpage.html" class="footlink">MUGS</a>
+                            <a href="merchpage.html" class="footlink">TUMBLERS</a>
+                            <a href="merchpage.html" class="footlink">BOTTLES</a>
+                        </div>
+                        <div style="display: flex; flex-direction: column;margin-right: 5vh;">
+                            <h4> EQUIPMENT</h4>
+                            <a href="coffeeequipment.html" class="footlink">FRENCH PRESS</a>
+                            <a href="coffeeequipment.html" class="footlink"> POUR OVER </a>
+                            <a href="coffeeequipment.html" class="footlink"> AERO PRESS </a>
+                            <a href="coffeeequipment.html" class="footlink"> STOVE TOP </a>
+                            <a href="coffeeequipment.html" class="footlink">SYPHONE</a>
+                        </div>
+
+
+                    </div>
+                    <div  class="footer-icons">
+                        <div><i class="fa-brands fa-twitter fa-2x"></i></div>
+                        <div><i class="fa-brands fa-instagram fa-2x"></i></div>
+                        <div><i class="fa-brands fa-facebook fa-2x"></i></div>
+                        <div><i class="fa-brands fa-linkedin fa-2x"></i></div>
+                        
+
+                    </div>
+
+                </div>
+
+            
+                <div class="newsletter" >
+                    <div style="display: flex; align-items: left;justify-content: left;">
+                        <p class="p">SUBSCRIBE TO OUR NEWSLETTER</p>
+                    </div>
+                    <div style="display: flex; align-items: left; justify-content: center;">
+                        <p>SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES  ABOUT ALL THINGS COFFEE AND BREW FACTORY. <br><br> STAY ON TOP OF THINGS WITH JUST ONE CLICK!</p>
+                    </div>
+                    
+                    <div class="email-box">
+                        <input type="email" id="email" placeholder="ENTER YOUR EMAIL">
+                        <label for="email">
+                        <button onclick="focusInput()" > <i class="fa-regular fa-envelope fa-2x"></i></button>
+                        </label>
+                    </div>
+                    
+
+                
+                </div>
+
+            </div>
+        </section>
+        <!-- COPYRIGHT-->
+        <div class="copyright">
+                    &copy  2024 COPYRIGHT: BREWFACTORY.COM
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Initialize Locomotive Scroll
+        const locoScroll = new LocomotiveScroll({
+            el: document.querySelector('.main1'),
+            smooth: true
+        });
+
+        // Update ScrollTrigger on scroll events
+        locoScroll.on("scroll", ScrollTrigger.update);
+
+        // Proxy methods for ScrollTrigger to work with Locomotive Scroll
+        ScrollTrigger.scrollerProxy(".main1", {
+            scrollTop(value) {
+                return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            },
+            pinType: document.querySelector(".main1").style.transform ? "transform" : "fixed"
+        });
+
+        // Ensure everything is refreshed on Locomotive Scroll and ScrollTrigger
+        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+        // Initialize GSAP animations with ScrollTrigger
+        function initGSAP() {
+            // Create a timeline
+            gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".logoclass",
+                        start: "top center" // adjust according to when you want the animation to start
+                    }
+                })
+                .from(".logoclass", {
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.5,
+                    ease: "power2.out"
+                })
+                // Animate nav elements after the logo
+                .from("nav ul li", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.5,
+                    stagger: 0.2, // stagger each li element
+                    ease: "power2.out"
+                }, "-=0.4") // overlap with the previous animation by 0.5 seconds
+                .from(".navicons", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.7,
+                    ease: "power2.out"
+                }, "-=0.8")
+
+              ;
+                
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".prosection",
+                    scroller: ".main1",
+                    start: "top 80%",
+                    end: "top 10%",
+                    scrub: 2,
+                   
+                }
+            });
+
+            // Add animations to the timeline
+            tl.from(".row1 .prod", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 3,
+            })
+            .from(".single1", {
+                opacity: 0,
+                x:- 50,
+                duration: 2,
+                delay: 0.1,
+                scrollTrigger:{
+                    trigger: ".single1",
+                    scroller:'.main1',
+                    start: "top 80%",
+                    end: "top 10%",
+                    scrub: 2,
+                }
+            })
+            .from(".row311 .p1", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 3,
+                scrollTrigger:{
+                    trigger:".row311",
+                    scroller:".main1",
+                    start:"top 80%",
+                    end:"top 10%",
+                    scrub:2,
+                }
+            })
+            .from(".row11 .prod1", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 3,
+                scrollTrigger:{
+                    trigger:".row11",
+                    scroller:".main1",
+                    start:"top 80%",
+                    end:"top 10%",
+                    scrub:2,
+                }
+            })
+            .from(".row312 .p2", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 3,
+                scrollTrigger:{
+                    trigger:".row312",
+                    scroller:".main1",
+                    start:"top 80%",
+                    end:"top 10%",
+                    scrub:2,
+                }
+            })
+            .from(".row313 ", {
+                opacity: 0,
+                x: 50,
+                stagger: 0.3,
+                duration: 3,
+                scrollTrigger:{
+                    trigger:".row313",
+                    scroller:".main1",
+                    start:"top 80%",
+                    end:"top 10%",
+                    scrub:2,
+                }
+            })
+            .from(".row314 ", {
+                opacity: 0,
+                x: -50,
+                stagger: 0.3,
+                duration: 3,
+                scrollTrigger:{
+                    trigger:".row314",
+                    scroller:".main1",
+                    start:"top 80%",
+                    end:"top 10%",
+                    scrub:2,
+                }
+            });
+             
+            const prods = document.querySelectorAll('.prod');
+            prods.forEach((prod) => {
+                const title = prod.querySelector('.title');
+                const cartButton = prod.querySelector('.cart-button');
+
+                // Set initial position class for title
+                title.classList.add('title-below');
+
+                prod.addEventListener('mouseenter', () => {
+                    gsap.to(title, {
+                        opacity: 1,
+                        duration: 0.3
+                    });
+                    gsap.to(cartButton, {
+                        opacity: 1,
+                        duration: 0.3
+                    });
+                    gsap.to(prod, {
+                        scale: 0.95,
+                        duration: 0.3
+                    });
+                });
+
+                prod.addEventListener('mouseleave', () => {
+                    gsap.to(title, {
+                        opacity: 0,
+                        duration: 0.3
+                    });
+                    gsap.to(cartButton, {
+                        opacity: 0,
+                        duration: 0.3
+                    });
+                    gsap.to(prod, {
+                        scale: 1,
+                        duration: 0.3
+                    });
+                });
+            });
+
+            document.querySelectorAll('.p1').forEach((p1, index) => {
+            const title = p1.querySelector('.title1');
+            const cartButton = p1.querySelector('.cart-button');
+
+            // Set initial position class
+            title.classList.add('title1-below');
+
+            p1.addEventListener('mouseenter', () => {
+                gsap.to(title, {
+                    opacity: 1,
+                    y: 0, // Ensure it animates to its natural position
+                    duration: 0.3
+                });
+                gsap.to(cartButton, {
+                        opacity: 1,
+                        duration: 0.3
+                    });
+                gsap.to(p1, {
+                    scale: 0.95,
+                    duration: 0.3
+                });
+            });
+
+            p1.addEventListener('mouseleave', () => {
+                gsap.to(title, {
+                    opacity: 0,
+                    y: 20, // Adjust y value to match the initial offset
+                    duration: 0.3,
+                    paddingBottom: 5
+                });
+                gsap.to(p1, {
+                    scale: 1,
+                    duration: 0.3
+                });
+            });
+        });
+
+        document.querySelectorAll('.p2').forEach((p2, index) => {
+        const title = p2.querySelector('.title1');
+
+        // Set initial position class
+        title.classList.add('title1-above');
+
+        p2.addEventListener('mouseenter', () => {
+            gsap.to(title, {
+                opacity: 1,
+                duration: 0.3
+                
+            });
+        });
+
+        p2.addEventListener('mouseleave', () => {
+            gsap.to(title, {
+                opacity: 0,
+                duration: 0.3
+            });
+        });
+    });
+    document.querySelectorAll('.prod1').forEach((prod1, index) => {
+    const title = prod1.querySelector('.title');
+
+        if (index < 2) { // for gif1 and gif2 (index 0 and 1)
+            title.classList.add('title-above');
+        } else { // for gif3 and gif4 (index 2 and 3)
+            title.classList.add('title-below');
+        }
+
+        prod1.addEventListener('mouseenter', () => {
+            gsap.to(title, {
+                opacity: 1,
+                duration: 0.3
+            });
+            gsap.to(prod1, {
+                scale:0.95,
+                duration: 0.3
+            });
+        });
+
+        prod1.addEventListener('mouseleave', () => {
+            gsap.to(title, {
+                opacity: 0,
+                duration: 0.3
+            });
+            gsap.to(prod1, {
+                scale:1,
+                duration: 0.3
+            });
+        });
+    });
+
+
+        }
+       
+    // Initialize GSAP animations
+    initGSAP();
+
+    // Refresh everything after initialization
+    ScrollTrigger.refresh();
+
+    // Ensure Locomotive Scroll updates on window resize
+    window.addEventListener('refresh', function() {
+        locoScroll.update();
+    });
+});
+
+</script>
+<script>
+     let slider = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.slider .dots li');
+
+        let lengthItems = items.length - 1;
+        let active = 0;
+
+        function updateItemWidths() {
+            let sliderWidth = document.querySelector('.slider').clientWidth;
+            items.forEach(item => {
+                item.style.width = sliderWidth + 'px';
+            });
+            slider.style.width = sliderWidth * items.length + 'px';
+        }
+
+        next.onclick = function() {
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadSlider();
+        }
+
+        prev.onclick = function() {
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        }
+
+        let refreshInterval = setInterval(() => {
+            next.click();
+        }, 3000);
+
+        function reloadSlider() {
+            if (active === lengthItems) {
+                slider.style.transition = 'none';
+                slider.style.transform = 'translateX(0)';
+                active = 0;
+                setTimeout(() => {
+                    slider.style.transition = 'transform 1s';
+                    slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+                }, 0);
+            } else {
+                slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+            }
+
+            let last_active_dot = document.querySelector('.slider .dots li.active');
+          last_active_dot.classList.remove('active');
+            dots[active].classList.add('active');
+
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => {
+                next.click();
+            }, 6000);
+        }
+
+        dots.forEach((li, key) => {
+            li.addEventListener('click', () => {
+                active = key;
+                reloadSlider();
+            });
+        });
+
+        window.onresize = function(event) {
+            updateItemWidths();
+            reloadSlider();
+        };
+
+        // Initial setup
+        updateItemWidths();
+        reloadSlider();
+
+        document.querySelectorAll('.heart-icon').forEach((heart) => {
+    heart.addEventListener('click', () => {
+        const message = heart.nextElementSibling; // Assuming .added-to-cart is right after .heart-icon
+        gsap.to(heart, { scale: 1.5, duration: 0.3, yoyo: true, repeat: 1 });
+        message.style.display = 'block';
+        gsap.to(message, { opacity: 1, duration: 0.5 });
+        setTimeout(() => {
+            gsap.to(message, { opacity: 0, duration: 0.5, onComplete: () => {
+                message.style.display = 'none';
+            }});
+        }, 2000);
+    });
+});
+</script>
+
+</body>
+</html>
