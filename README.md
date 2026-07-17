@@ -3,7 +3,9 @@
 A modern coffee house landing page featuring smooth scrolling, immersive animations, and an engaging user experience built with HTML, CSS, and JavaScript.
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Brew Factory Demo" width="1000">
+  <video>
+    <source src=>
+  </video>
 </p>
 
 ---
